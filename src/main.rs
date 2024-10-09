@@ -11,6 +11,10 @@ fn counting(vec: &[char], mut left: isize, mut right: isize) -> (isize, isize) {
 fn longest_polindrom(input_str: &str) -> &str {
     let vec: Vec<_> = input_str.chars().collect();
     let mut max_size_of_palindrome: (isize, isize) = (0, 0);
+    let str = "";
+    if input_str.len() == 0 {
+        return str;
+    }
 
     for i in 0..vec.len() - 1 {
         let size_palindrome_odd = counting(&vec, i as isize, i as isize + 1);
